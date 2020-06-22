@@ -58,8 +58,7 @@ function DecksScreeen(props) {
             }}
             style={{ fontSize: 30, padding: 30, margin: 10, backgroundColor: 'lightblue' }}
           >
-            {item.title}
-            {item.cards.length} cards
+            {item.title} <Text style={{ fontSize: 20,color:"green"}}>{item.cards.length} cards </Text> 
           </Text>
         )}
         keyExtractor={item => item.title}
