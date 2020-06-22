@@ -1,0 +1,59 @@
+Arguments: 
+  /usr/bin/node /usr/share/yarn/bin/yarn.js install
+
+PATH: 
+  /home/cyl/.npm/_npx/579/bin:/home/cyl/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/cyl/app/arm-2013.11/bin:/home/cyl/app/adt-bundle-linux-x86_64-20140702/sdk/tools:/home/cyl/bin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  10.21.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/react-native/-/react-native-0.61.5.tgz: unexpected end of file
+      at Zlib.zlibOnError [as onerror] (zlib.js:164:17)
+
+npm manifest: 
+  {
+    "main": "index.js",
+    "scripts": {
+      "android": "react-native run-android",
+      "ios": "react-native run-ios",
+      "web": "expo start --web",
+      "start": "react-native start",
+      "test": "jest"
+    },
+    "dependencies": {
+      "expo": "~37.0.3",
+      "expo-splash-screen": "^0.2.3",
+      "expo-updates": "~0.2.0",
+      "react": "~16.9.0",
+      "react-dom": "~16.9.0",
+      "react-native": "~0.61.5",
+      "react-native-gesture-handler": "~1.6.0",
+      "react-native-reanimated": "~1.7.0",
+      "react-native-screens": "~2.2.0",
+      "react-native-unimodules": "~0.9.0",
+      "react-native-web": "~0.11.7"
+    },
+    "devDependencies": {
+      "@babel/core": "~7.9.0",
+      "babel-jest": "~25.2.6",
+      "jest": "~25.2.6",
+      "react-test-renderer": "~16.9.0"
+    },
+    "jest": {
+      "preset": "react-native"
+    },
+    "private": true
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
