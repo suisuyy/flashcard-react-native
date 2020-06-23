@@ -19,14 +19,14 @@ export default function Deck(props) {
         color="grey"
         accessibilityLabel="add card"
       />
-      {deck.cards.length > 0 && (
         <Button
+          disabled={deck.cards.length===0}
           onPress={() => props.navigation.navigate('Quzz')}
           title="start quzz"
           color="green"
           accessibilityLabel="start quzz"
         />
-      )}
+      
 
       <Button
         onPress={() => {

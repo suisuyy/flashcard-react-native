@@ -72,6 +72,7 @@ export default class App extends React.Component {
         this.setState({
           ifQuzzComplete: true,
         });
+        Notifications.dismissAllNotificationsAsync();
       } else {
         if (new Date().getHours() > 20) {
           Permissions.askAsync(Permissions.NOTIFICATIONS).then(()=>{

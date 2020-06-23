@@ -2,7 +2,15 @@ import * as React from 'react';
 import { Text, View, StyleSheet, Image, TextInput, Button } from 'react-native';
 
 export default class CardAdder extends React.Component {
+  constructor(props){
+    super(props);
+    this.state={
+      question:'',
+      answer:''
+    }
+  }
   render() {
+
     return (
       <View>
         <Text style={{ fontSize: 20, margin: 30 }}>Add card</Text>
@@ -20,6 +28,7 @@ export default class CardAdder extends React.Component {
           style={{ fontSize: 20, margin: 30, borderWidth: 2 }}
         />
         <Button
+          disabled={!this.state.question || !this.state.answer }
           onPress={() => {
             this.props.submitNewCard({
               question: this.state.question,

@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Text, View, StyleSheet, Image, TextInput, Button } from 'react-native';
 
 import { setCompleteToLog } from '../utils/api';
+import { Notifications } from 'expo';
 
 export default class Quzz extends React.Component {
   constructor(props) {
@@ -20,6 +21,7 @@ export default class Quzz extends React.Component {
     let cards = this.props.selectedDeck.cards;
     if (this.state.index >= cards.length) {
       setCompleteToLog();
+      Notifications.dismissAllNotificationsAsync();
       return (
         <View>
           <Result correct={this.state.numOfCorrect} total={cards.length} />
@@ -32,7 +34,7 @@ export default class Quzz extends React.Component {
           />
           <Button
             onPress={() => this.setState({ index: 0 })}
-            title="start quzz"
+            title="restart quzz"
             color="green"
             accessibilityLabel="restart quzz"
           />

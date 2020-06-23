@@ -69,6 +69,12 @@ function DecksScreeen(props) {
 }
 
 class AddDeckScreen extends React.Component {
+  constructor(props){
+    super(props);
+    this.state={
+      input:''
+    }
+  }
   render() {
     return (
       <View>
@@ -79,6 +85,7 @@ class AddDeckScreen extends React.Component {
           style={{ fontSize: 20, margin: 10, borderWidth: 2 }}
         />
         <Button
+          disabled={!this.state.input}
           onPress={() => {
             this.props.submitNewDeck(this.state.input);
             this.props.navigation.navigate('Deck');
